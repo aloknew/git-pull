@@ -15,7 +15,7 @@ pipeline {
          
         stage ('Deploy to Production'){
               steps {                    
-                  sh "ls -ltr"                
+                  sh 'ls -ltr'
                   }            
          }
    }
