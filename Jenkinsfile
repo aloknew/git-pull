@@ -8,15 +8,15 @@ pipeline {
   
   stages{
         stage('Build'){
-            steps {            
+            steps {
                 sh 'echo done'
                 }
          }
          
         stage ('Deploy to Production'){
-              steps {  
+              steps {
                   sh 'ls -ltr'
-                  } 
+                  }
          }
    }
 }
