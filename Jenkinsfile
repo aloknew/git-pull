@@ -1,6 +1,7 @@
 pipeline {
   agent {
-    node {  
+    node {
+        label 'my-defined-label'
         customWorkspace '/tmp/alok'
     }
   } 
