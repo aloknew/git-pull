@@ -15,7 +15,7 @@ pipeline {
          
         stage ('Deploy to Production'){
               steps {
-                  sh '/usr/local/bin/sshput -u enbaler -f SERVER_LIST *.html /opt/app/workload/httpserver/htdocs/rtapi/'
+                  sh '/usr/local/bin/sshput -u enabler -f SERVER_LIST *.html /opt/app/workload/httpserver/htdocs/rtapi/'
                   }
          }
    }
