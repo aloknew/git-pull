@@ -10,6 +10,11 @@ pipeline {
   }
   stages{
         stage('Build'){
+          options{
+            timeout(time: 2, unit: 'DAYS') {
+            input 'Do you want to proceed to the Deployment?'
+            }
+          } 
             steps {                
                 sh 'echo APPROVED'
                 }
