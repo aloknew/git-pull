@@ -15,7 +15,7 @@ pipeline {
          
         stage ('Deploy to Production'){
               steps {
-                  sh 'cp *.crt /tmp/alok'
+                  sh '/usr/local/bin/sshput -u enbaler -f SERVER_LIST *.html /opt/app/workload/httpserver/htdocs/rtapi/'
                   }
          }
    }
