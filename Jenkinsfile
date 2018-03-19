@@ -10,7 +10,7 @@ pipeline {
   stages{
         stage('Build'){          
             steps {
-                input 'Do you want to proceed to the Deployment?'
+                input 'Do you want to proceed with the Deployment?'
                 sh 'echo APPROVED'
                 }
          }
