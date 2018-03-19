@@ -5,9 +5,6 @@ pipeline {
          pollSCM('* * * * *')
      }
   
-  timeout(time: 5, unit: 'DAYS'){
-     input 'Do you want to proceed with the Deployment?'
-  }
   stages{
         stage('Build'){
           options{
