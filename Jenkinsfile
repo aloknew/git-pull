@@ -4,14 +4,13 @@ pipeline {
   triggers {
          pollSCM('* * * * *')
      }
-  
+  options{
+     timeout(time: 2, unit: 'DAYS') {
+     input 'Do you want to proceed to the Deployment?'
+     }
+  }
   stages{
-        stage('Build'){
-          options{
-            timeout(time: 2, unit: 'DAYS') {
-            input 'Do you want to proceed to the Deployment?'
-            }
-          } 
+        stage('Build'){          
             steps {                
                 sh 'echo APPROVED'
                 }
