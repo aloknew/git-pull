@@ -6,13 +6,10 @@ pipeline {
      }
   
   stages{
-        stage('Deploy approval'){
-              input "Deploy to prod?"
-        }
-    
         stage('Build'){
             steps {
-                sh 'echo done'
+                input "Deploy to prod?"
+                sh 'echo APPROVED'
                 }
          }
          
